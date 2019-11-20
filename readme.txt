@@ -4,7 +4,7 @@ Contributors: Thememattic
 
 Requires at least: 4.0
 Tested up to: 5.1.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -96,6 +96,9 @@ Source: https://fonts.google.com/specimen/Playfair+Display
 License: Open Font License
 
 == Changelog =
+
+= 1.0.3 - Nov 13 2019 =
+=Added fixing for the glitches=
 
 = 1.0.2 - Mar 22 2019 =
 =Added background image on author widget=

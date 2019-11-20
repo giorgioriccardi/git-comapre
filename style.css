@@ -4,7 +4,7 @@ Theme URI: https://thememattic.com/theme/minimal-lite-pro
 Author: Thememattic
 Author URI: https://thememattic.com
 Description: Meet Minimal Lite Pro, a fresh-faced free masonry layout Blog WordPress theme. Minimal Lite Pro is a stunning, fully responsive, WordPress blogging theme suitable for any kind of blog, personal, fashion, food, travel, photography, publishing or tutorial blog sites. Simply upload, import the demo data, and swap out the text and images as you wish! Let Minimal Lite Pro's clean vibe and arresting design elements elevate your content to its fullest potential.
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: minimal-lite
@@ -700,10 +700,13 @@ a {
     text-decoration: none !important;
 }
 
+a:focus {
+    outline: thin dotted;
+}
+
 a:hover,
-a:focus,
 a:active {
-    outline: none;
+    outline: 0;
 }
 
 /*----------------------------------------------------------------------------*/
@@ -790,15 +793,14 @@ loading-center {
 }
 
 #second_object {
-    -webkit-animation: second_object 1s forwards, second_object_animate 1s infinite ease-in-out;
-    animation: second_object 1s forwards, second_object_animate 1s infinite ease-in-out;
+    -webkit-animation: second_object 0.7s forwards, second_object_animate 0.7s infinite ease-in-out;
+    animation: second_object 0.7s forwards, second_object_animate 0.7s infinite ease-in-out;
 }
 
 #third_object {
-    -webkit-animation: third_object 1s forwards, third_object_animate 1s infinite ease-in-out;
-    animation: third_object 1s forwards, third_object_animate 1s infinite ease-in-out;
+    -webkit-animation: third_object 0.8s forwards, third_object_animate 0.8s infinite ease-in-out;
+    animation: third_object 0.8s forwards, third_object_animate 0.8s infinite ease-in-out;
 }
-
 
 @-webkit-keyframes second_object {
     100% {
@@ -1475,7 +1477,9 @@ loading-center {
         padding: 0;
     }
 
-    .main-navigation .menu li:hover > ul {
+    .main-navigation .menu li:hover > ul,
+    .main-navigation .menu li:focus > ul,
+    .main-navigation .menu li:focus-within > ul{
         visibility: visible;
         filter: alpha(opacity=1);
         opacity: 1;

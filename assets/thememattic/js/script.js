@@ -94,14 +94,14 @@
 
         n.ModelBox = function () {
             if (document.cookie.indexOf('visited=true') == -1) {
-                $('#newsletter-model.onetime').modal({show: true});
+                e('#newsletter-model.onetime').modal({show: true});
 
                 var year = 1000 * 60 * 60 * 24 * 365;
                 var expires = new Date((new Date()).valueOf() + year);
                 document.cookie = "visited=true;expires=" + expires.toUTCString();
             }
 
-            $('#newsletter-model.everytime').modal({show: true});
+            e('#newsletter-model.everytime').modal({show: true});
         },
 
         n.SageSlider = function () {
@@ -341,7 +341,7 @@
         },
 
         n.thememattic_matchheight = function () {
-            jQuery('.theiaStickySidebar', 'body').parent().theiaStickySidebar({
+            jQuery('.widget-area').theiaStickySidebar({
                 additionalMarginTop: 30
             });
         },

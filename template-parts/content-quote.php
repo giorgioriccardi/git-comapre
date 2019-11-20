@@ -63,18 +63,9 @@
                 }else{
                     echo '<div class="post-thumb bg-quote"></div>';
                 }
-                the_content( sprintf(
-                    wp_kses(
-                    /* translators: %s: Name of current post. Only visible to screen readers */
-                        __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'minimal-lite' ),
-                        array(
-                            'span' => array(
-                                'class' => array(),
-                            ),
-                        )
-                    ),
-                    get_the_title()
-                ) );
+                echo "<blockquote>";
+                    the_excerpt();
+                echo "</blockquote>";
                 echo '<h2 class="entry-title quote-entry-title">'.esc_html(get_the_title()).'</h2>';
                 wp_link_pages( array(
                     'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'minimal-lite' ),
